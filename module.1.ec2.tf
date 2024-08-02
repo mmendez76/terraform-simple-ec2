@@ -8,7 +8,7 @@ module "aws_ec2_ubuntu" {
   subnet = module.static_aws_vpc.subnet_main
 
   token             = random_string.token.result
-  ami_id            = "ami-04a81a99f5ec58529"
+  ami_id            = var.ami_id_ubuntu24_04
   instance_type     = "t2.micro"
   public_ip_address = var.public_ip_address
 }
